@@ -1,0 +1,16 @@
+---
+- hosts: 172.31.89.142
+  become: yes
+  tasks:
+  - name: install git
+    apt:
+     name: git
+
+  - name: install wget
+    apt:
+     namee: wget
+    ignore_error: yes
+
+  - name: install tree
+    apt:
+     name: tree

@@ -1,0 +1,20 @@
+---
+- hosts: 172.31.21.246
+  become: yes
+  tasks:
+   - name: install apache
+     yum:
+      name: httpd
+     notify: restartwebserver
+
+   - name: copy index.j2 file
+     template:
+      src: index.j2
+      dest: /etc/httpd.conf
+     notify: restartwebserver
+     
+  handlers:
+  - name: restartwebserver
+    service: 
+     name: httpd
+     state: started         

@@ -9,5 +9,5 @@
     loop:
      - git
      - wget
-     - tree 
+     - tree
      

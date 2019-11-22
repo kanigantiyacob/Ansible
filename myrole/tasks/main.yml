@@ -1,6 +1,6 @@
 ---
 # tasks file for myrole
-- hosts: all
+- hosts: 172.31.89.14
   become: yes
   - name: install apache2
     apt:

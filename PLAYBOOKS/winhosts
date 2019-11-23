@@ -3,6 +3,6 @@
 
 [win:vars]
 ansible_user=Administrator
-ansible_password=bf36foAA8mf
+ansible_password=JW!hnwQmxB
 ansible_connection=winrm
 ansible_winrm_server_cert_validation=ignore

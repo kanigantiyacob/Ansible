@@ -1,9 +1,12 @@
 ---
-# tasks file for myrole
-- hosts: 172.31.89.14
-  become: yes
-  tasks:
-  - name: install apache2
-    apt:
-     name: apache2
-     state: present
+# tasks file for mtwebRole
+
+- name: install webserver 
+  apt:
+    name: apache2
+    state: present
+
+- name: install git
+  apt:
+    name: git
+    state: present

@@ -2,6 +2,7 @@
 # tasks file for myrole
 - hosts: 172.31.89.14
   become: yes
+  tasks:
   - name: install apache2
     apt:
      name: apache2

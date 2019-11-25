@@ -1,2 +1,9 @@
 ---
 # tasks file for firstproject
+- include_tasks: installjava.yml
+- include_tasks: createUG.yml
+- include_tasks: tomcatdownload.yml
+- include_tasks: extract.yml 
+- include_tasks: permissions.yml
+- include_tasks: config.yml
+- include_tasks: tomcatstart.yml

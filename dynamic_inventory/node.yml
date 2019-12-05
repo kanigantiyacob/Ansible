@@ -1,0 +1,17 @@
+---
+- hosts: localhost
+  become: yes
+  tasks:
+  - name: create ubuntu nodes
+    ec2:
+      key_name: virginia
+      instance_type: t2.micro
+      image: ami-0b680b9c29825d737
+      region: us-east-1
+      wait: yes
+      group: launch-wizard-1
+      instance_tags:
+         Name: ubuntunode
+      count: 2
+      vpc_subnet_id: subnet-36675e6a
+      assign_public_ip: yes
